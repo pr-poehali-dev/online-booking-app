@@ -27,7 +27,7 @@ const masters = [
   { id: 3, name: "Ксения Новикова", spec: "Косметолог-эстетист", rating: 5.0, reviews: 312, img: MASTER_IMG1, tags: ["Чистка лица", "Массаж", "Пилинг"] },
 ];
 
-const timeSlots = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"];
+const timeSlots = ["11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"];
 const busySlots = ["10:00", "13:00", "15:00", "18:00"];
 
 const myBookings = [
@@ -254,16 +254,16 @@ function HomePage({ setPage, startBooking }: { setPage: (p: Page) => void; start
               <div className="text-white/40 text-xs">Позвонить или написать</div>
             </div>
           </a>
-          <div className="flex items-center gap-3">
+          <a href="https://yandex.ru/profile/46803820767?lang=ru" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
               style={{ background: "hsl(270 100% 65% / 0.15)" }}>
               <Icon name="MapPin" size={18} style={{ color: "hsl(270 100% 70%)" }} />
             </div>
-            <div>
-              <div className="text-white font-semibold">ул. Заречная, 10</div>
-              <div className="text-white/40 text-xs">Санкт-Петербург · м. Парнас</div>
+            <div className="flex-1">
+              <div className="text-white font-semibold group-hover:underline">ул. Заречная, 10</div>
+              <div className="text-white/40 text-xs">Санкт-Петербург · м. Парнас · открыть на карте →</div>
             </div>
-          </div>
+          </a>
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
               style={{ background: "hsl(185 100% 55% / 0.15)" }}>
