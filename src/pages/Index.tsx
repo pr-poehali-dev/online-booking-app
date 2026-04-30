@@ -231,13 +231,50 @@ function HomePage({ setPage, startBooking }: { setPage: (p: Page) => void; start
       </div>
 
       {/* CTA */}
-      <div className="px-4">
+      <div className="px-4 mb-6">
         <button
           onClick={() => setPage("services")}
           className="w-full py-4 rounded-2xl font-semibold text-white text-lg animate-pulse-glow"
           style={{ background: "linear-gradient(135deg, hsl(315 100% 55%), hsl(270 100% 60%))" }}>
           Записаться сейчас
         </button>
+      </div>
+
+      {/* Contacts */}
+      <div className="px-4 mb-2">
+        <div className="card-glow rounded-3xl p-5 space-y-4">
+          <h2 className="text-lg font-oswald font-semibold text-white">Как нас найти</h2>
+          <a href="tel:+79046015556" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+              style={{ background: "hsl(315 100% 60% / 0.15)" }}>
+              <Icon name="Phone" size={18} style={{ color: "hsl(315 100% 65%)" }} />
+            </div>
+            <div>
+              <div className="text-white font-semibold group-hover:underline">+7 (904) 601-55-56</div>
+              <div className="text-white/40 text-xs">Позвонить или написать</div>
+            </div>
+          </a>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+              style={{ background: "hsl(270 100% 65% / 0.15)" }}>
+              <Icon name="MapPin" size={18} style={{ color: "hsl(270 100% 70%)" }} />
+            </div>
+            <div>
+              <div className="text-white font-semibold">ул. Заречная, 10</div>
+              <div className="text-white/40 text-xs">Санкт-Петербург · м. Парнас</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+              style={{ background: "hsl(185 100% 55% / 0.15)" }}>
+              <Icon name="Clock" size={18} style={{ color: "hsl(185 100% 60%)" }} />
+            </div>
+            <div>
+              <div className="text-white font-semibold">Пн–Вс: 9:00 – 20:00</div>
+              <div className="text-white/40 text-xs">Без выходных</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
