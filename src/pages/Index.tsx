@@ -140,6 +140,16 @@ function HomePage({ setPage, startBooking }: { setPage: (p: Page) => void; start
         <div className="absolute inset-0" style={{
           background: "linear-gradient(to bottom, rgba(15,15,25,0.3) 0%, rgba(15,15,25,0.7) 60%, rgba(15,15,25,1) 100%)"
         }} />
+        <div className="absolute top-0 left-0 right-0 p-5 flex items-center justify-between">
+          <div>
+            <div className="text-white font-oswald font-bold text-xl tracking-wide">Girly Paradise</div>
+            <div className="text-white/40 text-xs">Салон красоты</div>
+          </div>
+          <div className="flex items-center gap-1 text-white/50 text-xs">
+            <Icon name="MapPin" size={12} />
+            <span>м. Парнас</span>
+          </div>
+        </div>
         <div className="absolute bottom-0 left-0 right-0 p-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3 text-xs font-medium"
             style={{ background: "hsl(315 100% 60% / 0.2)", border: "1px solid hsl(315 100% 60% / 0.4)", color: "hsl(315 100% 75%)" }}>
