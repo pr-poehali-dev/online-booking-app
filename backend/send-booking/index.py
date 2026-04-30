@@ -70,8 +70,12 @@ def handler(event: dict, context) -> dict:
         <div style="background: linear-gradient(135deg, hsl(315,100%,55%), hsl(270,100%,60%)); padding: 2px; border-radius: 14px; margin-bottom: 24px;">
             <div style="background: #0f0f19; border-radius: 12px; padding: 24px; text-align: center;">
                 <div style="font-size: 40px; margin-bottom: 8px;">✅</div>
-                <h1 style="margin: 0; font-size: 24px; font-weight: 700;">Запись подтверждена!</h1>
-                <p style="margin: 8px 0 0; color: #888; font-size: 14px;">Привет, {name}! Ждём тебя</p>
+                <h1 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: 1px;">Girly Paradise</h1>
+                <p style="margin: 6px 0 0; color: hsl(315,100%,65%); font-size: 13px; letter-spacing: 2px; text-transform: uppercase;">Салон красоты</p>
+                <div style="margin-top: 16px; border-top: 1px solid #222; padding-top: 16px;">
+                    <p style="margin: 0; font-size: 18px; font-weight: 600;">Запись подтверждена!</p>
+                    <p style="margin: 6px 0 0; color: #888; font-size: 14px;">Привет, {name}! Ждём тебя 💅</p>
+                </div>
             </div>
         </div>
         <table style="width: 100%; border-collapse: collapse;">
@@ -80,10 +84,15 @@ def handler(event: dict, context) -> dict:
             <tr><td style="padding: 10px 0; color: #888; font-size: 14px; border-bottom: 1px solid #222;">Дата и время</td><td style="padding: 10px 0; font-weight: 600; text-align: right; border-bottom: 1px solid #222;">{day} в {time}</td></tr>
             <tr><td style="padding: 10px 0; color: #888; font-size: 14px;">Стоимость</td><td style="padding: 10px 0; font-weight: 700; text-align: right; color: hsl(315,100%,65%); font-size: 18px;">{price} ₽</td></tr>
         </table>
-        <div style="margin-top: 24px; padding: 20px; background: rgba(255,80,180,0.08); border: 1px solid rgba(255,80,180,0.2); border-radius: 12px; font-size: 14px; color: #ccc; text-align: center;">
+        <div style="margin-top: 24px; padding: 20px; background: rgba(255,80,180,0.08); border: 1px solid rgba(255,80,180,0.2); border-radius: 12px; text-align: center;">
+            <div style="font-size: 20px; margin-bottom: 8px;">📍</div>
+            <div style="font-weight: 600; font-size: 15px; margin-bottom: 4px;">Санкт-Петербург, м. Парнас</div>
+            <div style="color: #aaa; font-size: 14px;">ул. Заречная, 10</div>
+        </div>
+        <div style="margin-top: 16px; padding: 16px; background: rgba(255,255,255,0.03); border-radius: 10px; font-size: 13px; color: #888; text-align: center;">
             Если нужно перенести или отменить запись — свяжитесь с нами заранее
         </div>
-        <div style="margin-top: 16px; font-size: 12px; color: #444; text-align: center;">
+        <div style="margin-top: 12px; font-size: 11px; color: #333; text-align: center;">
             Это письмо отправлено автоматически, отвечать на него не нужно
         </div>
     </div>
