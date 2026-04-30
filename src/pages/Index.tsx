@@ -16,19 +16,18 @@ const services = [
 
 const categories = ["Все", "Косметология"];
 
+const GALINA_IMG = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b9182713699/bucket/fca14d2f-e578-4aaf-8503-1ac82dd6ddca.jpg";
+
 const masters = [
-  { id: 1, name: "Алина Петрова", spec: "Мастер ногтевого сервиса", rating: 4.9, reviews: 247, img: MASTER_IMG1, tags: ["Маникюр", "Педикюр", "Наращивание"] },
-  { id: 2, name: "Мария Соколова", spec: "Стилист-колорист", rating: 4.8, reviews: 183, img: TEAM_IMG, tags: ["Стрижка", "Окрашивание", "Укладка"] },
-  { id: 3, name: "Ксения Новикова", spec: "Косметолог-эстетист", rating: 5.0, reviews: 312, img: MASTER_IMG1, tags: ["Чистка лица", "Массаж", "Пилинг"] },
+  { id: 1, name: "Галина Сиплатова", spec: "Косметолог-эстетист", rating: 5.0, reviews: 312, img: GALINA_IMG, tags: ["Чистка лица", "Массаж лица", "Омоложение", "Коррекция фигуры"] },
 ];
 
 const timeSlots = ["11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"];
 const busySlots = ["10:00", "13:00", "15:00", "18:00"];
 
 const myBookings = [
-  { id: 1, service: "Маникюр с покрытием", master: "Алина Петрова", date: "15 мая 2026", time: "14:00", status: "upcoming", price: 1800 },
-  { id: 2, service: "Стрижка + укладка", master: "Мария Соколова", date: "28 апреля 2026", time: "11:00", status: "done", price: 2500 },
-  { id: 3, service: "Чистка лица", master: "Ксения Новикова", date: "10 апреля 2026", time: "16:00", status: "done", price: 3200 },
+  { id: 1, service: "Чистка лица", master: "Галина Сиплатова", date: "15 мая 2026", time: "14:00", status: "upcoming", price: 3200 },
+  { id: 2, service: "Массаж лица", master: "Галина Сиплатова", date: "28 апреля 2026", time: "11:00", status: "done", price: 2800 },
 ];
 
 const weekDays = [
