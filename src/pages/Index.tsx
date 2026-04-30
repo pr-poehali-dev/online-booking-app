@@ -10,17 +10,11 @@ const LOGO_IMG = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b918
 type Page = "home" | "services" | "masters" | "booking" | "profile";
 
 const services = [
-  { id: 1, name: "Маникюр классический", category: "Ногти", price: 1200, duration: 60, icon: "Sparkles", color: "from-pink-500 to-rose-600" },
-  { id: 2, name: "Маникюр с покрытием", category: "Ногти", price: 1800, duration: 90, icon: "Star", color: "from-purple-500 to-violet-600" },
-  { id: 3, name: "Стрижка + укладка", category: "Волосы", price: 2500, duration: 120, icon: "Scissors", color: "from-cyan-500 to-blue-600" },
-  { id: 4, name: "Окрашивание волос", category: "Волосы", price: 4500, duration: 180, icon: "Palette", color: "from-yellow-500 to-orange-500" },
   { id: 5, name: "Чистка лица", category: "Косметология", price: 3200, duration: 90, icon: "Heart", color: "from-rose-500 to-pink-600" },
   { id: 6, name: "Массаж лица", category: "Косметология", price: 2800, duration: 60, icon: "Wind", color: "from-teal-500 to-cyan-600" },
-  { id: 7, name: "Наращивание ресниц", category: "Лицо", price: 3500, duration: 120, icon: "Eye", color: "from-indigo-500 to-purple-600" },
-  { id: 8, name: "Коррекция бровей", category: "Лицо", price: 900, duration: 45, icon: "Minus", color: "from-amber-500 to-yellow-600" },
 ];
 
-const categories = ["Все", "Ногти", "Волосы", "Косметология", "Лицо"];
+const categories = ["Все", "Косметология"];
 
 const masters = [
   { id: 1, name: "Алина Петрова", spec: "Мастер ногтевого сервиса", rating: 4.9, reviews: 247, img: MASTER_IMG1, tags: ["Маникюр", "Педикюр", "Наращивание"] },
