@@ -359,11 +359,42 @@ function MastersPage({ masters, setPage }: { masters: Master[]; setPage: (p: Pag
   );
 }
 
+const SEND_BOOKING_URL = "https://functions.poehali.dev/33731d63-c7a5-4a89-b075-6b0a4282ecfc";
+
 function BookingPage({ step, setStep, selectedService, setSelectedService, selectedMaster, setSelectedMaster,
   selectedDay, setSelectedDay, selectedTime, setSelectedTime, bookingDone,
   confirmBooking, services: svcList, masters: mstrList, weekDays: wDays, timeSlots: tSlots, busySlots: bSlots, setPage }: any) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleConfirm = async () => {
+    if (!name || !phone) return;
+    setLoading(true);
+    setError("");
+    try {
+      const dayLabel = wDays.find((d: any) => d.date === selectedDay);
+      await fetch(SEND_BOOKING_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          service: selectedService?.name,
+          master: selectedMaster?.name || "Любой свободный",
+          day: `${dayLabel?.day}, ${selectedDay} мая`,
+          time: selectedTime,
+          price: selectedService?.price,
+        }),
+      });
+      confirmBooking();
+    } catch {
+      setError("Ошибка отправки. Попробуйте ещё раз.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   if (bookingDone) {
     return (
@@ -587,12 +618,20 @@ function BookingPage({ step, setStep, selectedService, setSelectedService, selec
             </div>
           </div>
 
-          <button onClick={() => name && phone && confirmBooking()} disabled={!name || !phone}
-            className="w-full py-4 rounded-2xl font-semibold text-white text-lg transition-all"
-            style={name && phone
+          {error && (
+            <p className="text-red-400 text-sm text-center mb-3">{error}</p>
+          )}
+          <button onClick={handleConfirm} disabled={!name || !phone || loading}
+            className="w-full py-4 rounded-2xl font-semibold text-white text-lg transition-all flex items-center justify-center gap-2"
+            style={name && phone && !loading
               ? { background: "linear-gradient(135deg, hsl(315 100% 55%), hsl(270 100% 60%))" }
               : { background: "hsl(240 8% 20%)", color: "hsl(0 0% 40%)" }}>
-            Подтвердить запись
+            {loading ? (
+              <>
+                <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                Отправляем...
+              </>
+            ) : "Подтвердить запись"}
           </button>
           <p className="text-center text-white/20 text-xs mt-3">Нажимая кнопку, вы соглашаетесь с условиями</p>
         </div>
