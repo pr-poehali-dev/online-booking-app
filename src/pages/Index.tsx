@@ -167,7 +167,7 @@ function HomePage({ setPage, startBooking }: { setPage: (p: Page) => void; start
       {/* Quick stats */}
       <div className="grid grid-cols-3 gap-3 px-4 -mt-4 relative z-10 mb-6">
         {[
-          { val: "500+", label: "Клиентов", icon: "Users" },
+          { val: "4000+", label: "Клиентов", icon: "Users" },
           { val: "4.9★", label: "Рейтинг", icon: "Star" },
           { val: "8+", label: "Услуг", icon: "Sparkles" },
         ].map((item) => (
