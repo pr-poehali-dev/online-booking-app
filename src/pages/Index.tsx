@@ -271,6 +271,16 @@ function HomePage({ setPage, startBooking }: { setPage: (p: Page) => void; start
               <div className="text-white/40 text-xs">Санкт-Петербург · м. Парнас · открыть на карте →</div>
             </div>
           </a>
+          <a href="https://vk.ru/girly_paradise_spb" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+              style={{ background: "hsl(220 80% 55% / 0.15)" }}>
+              <span style={{ fontSize: 18 }}>💙</span>
+            </div>
+            <div>
+              <div className="text-white font-semibold group-hover:underline">ВКонтакте</div>
+              <div className="text-white/40 text-xs">@girly_paradise_spb</div>
+            </div>
+          </a>
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
               style={{ background: "hsl(185 100% 55% / 0.15)" }}>
