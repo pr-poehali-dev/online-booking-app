@@ -366,6 +366,7 @@ function BookingPage({ step, setStep, selectedService, setSelectedService, selec
   confirmBooking, services: svcList, masters: mstrList, weekDays: wDays, timeSlots: tSlots, busySlots: bSlots, setPage }: any) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -381,6 +382,7 @@ function BookingPage({ step, setStep, selectedService, setSelectedService, selec
         body: JSON.stringify({
           name,
           phone,
+          email,
           service: selectedService?.name,
           master: selectedMaster?.name || "Любой свободный",
           day: `${dayLabel?.day}, ${selectedDay} мая`,
@@ -613,6 +615,12 @@ function BookingPage({ step, setStep, selectedService, setSelectedService, selec
             <div>
               <label className="text-white/50 text-xs mb-1 block uppercase tracking-wider">Телефон</label>
               <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+7 (999) 000-00-00" type="tel"
+                className="w-full px-4 py-3 rounded-xl text-white placeholder-white/20 outline-none"
+                style={{ background: "hsl(240 8% 12%)", border: "1px solid hsl(240 8% 20%)" }} />
+            </div>
+            <div>
+              <label className="text-white/50 text-xs mb-1 block uppercase tracking-wider">Email для подтверждения</label>
+              <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="your@email.com" type="email"
                 className="w-full px-4 py-3 rounded-xl text-white placeholder-white/20 outline-none"
                 style={{ background: "hsl(240 8% 12%)", border: "1px solid hsl(240 8% 20%)" }} />
             </div>
