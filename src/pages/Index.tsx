@@ -270,7 +270,7 @@ function HomePage({ setPage, startBooking }: { setPage: (p: Page) => void; start
               <Icon name="Clock" size={18} style={{ color: "hsl(185 100% 60%)" }} />
             </div>
             <div>
-              <div className="text-white font-semibold">Пн–Вс: 9:00 – 20:00</div>
+              <div className="text-white font-semibold">Ежедневно: 11:00 – 20:00</div>
               <div className="text-white/40 text-xs">Без выходных</div>
             </div>
           </div>
