@@ -244,16 +244,23 @@ function HomePage({ setPage, startBooking }: { setPage: (p: Page) => void; start
       <div className="px-4 mb-2">
         <div className="card-glow rounded-3xl p-5 space-y-4">
           <h2 className="text-lg font-oswald font-semibold text-white">Как нас найти</h2>
-          <a href="tel:+79046015556" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-              style={{ background: "hsl(315 100% 60% / 0.15)" }}>
-              <Icon name="Phone" size={18} style={{ color: "hsl(315 100% 65%)" }} />
-            </div>
-            <div>
-              <div className="text-white font-semibold group-hover:underline">+7 (904) 601-55-56</div>
-              <div className="text-white/40 text-xs">Позвонить или написать</div>
-            </div>
-          </a>
+          <div className="flex items-center gap-3">
+            <a href="tel:+79046015556" className="flex items-center gap-3 group flex-1">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                style={{ background: "hsl(315 100% 60% / 0.15)" }}>
+                <Icon name="Phone" size={18} style={{ color: "hsl(315 100% 65%)" }} />
+              </div>
+              <div>
+                <div className="text-white font-semibold group-hover:underline">+7 (904) 601-55-56</div>
+                <div className="text-white/40 text-xs">Нажми чтобы позвонить</div>
+              </div>
+            </a>
+            <a href="https://wa.me/79046015556" target="_blank" rel="noopener noreferrer"
+              className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all hover:scale-105"
+              style={{ background: "hsl(142 70% 40% / 0.2)", border: "1px solid hsl(142 70% 40% / 0.3)" }}>
+              <span style={{ fontSize: 18 }}>💬</span>
+            </a>
+          </div>
           <a href="https://yandex.ru/profile/46803820767?lang=ru" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
               style={{ background: "hsl(270 100% 65% / 0.15)" }}>
