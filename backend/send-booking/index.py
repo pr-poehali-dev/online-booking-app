@@ -41,12 +41,15 @@ def handler(event: dict, context) -> dict:
     smtp_password = os.environ["SMTP_PASSWORD"]
     owner_email = "Siplatova777@list.ru"
 
+    owner_logo = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b9182713699/bucket/91d2850b-d07b-4736-9ab4-23d3cca534fa.png"
+
     # Письмо владельцу
     owner_html = f"""
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0f0f19; color: #ffffff; padding: 32px; border-radius: 16px;">
         <div style="background: linear-gradient(135deg, hsl(315,100%,55%), hsl(270,100%,60%)); padding: 2px; border-radius: 14px; margin-bottom: 24px;">
             <div style="background: #0f0f19; border-radius: 12px; padding: 24px; text-align: center;">
-                <h1 style="margin: 0; font-size: 24px; font-weight: 700;">Новая запись!</h1>
+                <img src="{owner_logo}" alt="Girly Paradise" style="width: 80px; height: 80px; object-fit: contain; background: white; border-radius: 12px; padding: 6px; margin-bottom: 10px;" />
+                <h1 style="margin: 0; font-size: 22px; font-weight: 700;">Новая запись!</h1>
             </div>
         </div>
         <table style="width: 100%; border-collapse: collapse;">
@@ -64,14 +67,15 @@ def handler(event: dict, context) -> dict:
     </div>
     """
 
+    logo_url = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b9182713699/bucket/91d2850b-d07b-4736-9ab4-23d3cca534fa.png"
+
     # Письмо клиенту
     client_html = f"""
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0f0f19; color: #ffffff; padding: 32px; border-radius: 16px;">
         <div style="background: linear-gradient(135deg, hsl(315,100%,55%), hsl(270,100%,60%)); padding: 2px; border-radius: 14px; margin-bottom: 24px;">
             <div style="background: #0f0f19; border-radius: 12px; padding: 24px; text-align: center;">
-                <div style="font-size: 40px; margin-bottom: 8px;">✅</div>
-                <h1 style="margin: 0; font-size: 26px; font-weight: 700; letter-spacing: 1px;">Girly Paradise</h1>
-                <p style="margin: 6px 0 0; color: hsl(315,100%,65%); font-size: 13px; letter-spacing: 2px; text-transform: uppercase;">Салон красоты</p>
+                <img src="{logo_url}" alt="Girly Paradise" style="width: 100px; height: 100px; object-fit: contain; background: white; border-radius: 16px; padding: 8px; margin-bottom: 12px;" />
+                <p style="margin: 6px 0 0; color: hsl(315,100%,65%); font-size: 13px; letter-spacing: 2px; text-transform: uppercase;">Beauty Apartments</p>
                 <div style="margin-top: 16px; border-top: 1px solid #222; padding-top: 16px;">
                     <p style="margin: 0; font-size: 18px; font-weight: 600;">Запись подтверждена!</p>
                     <p style="margin: 6px 0 0; color: #888; font-size: 14px;">Привет, {name}! Ждём тебя 💅</p>

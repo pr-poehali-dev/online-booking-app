@@ -5,6 +5,7 @@ import Icon from "@/components/ui/icon";
 const HERO_IMG = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b9182713699/files/6b57d904-553a-4a99-8cb9-fe605cdc050f.jpg";
 const MASTER_IMG1 = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b9182713699/files/e395c63f-3160-4bb4-8eb0-3f30851c376c.jpg";
 const TEAM_IMG = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b9182713699/files/04d60e29-907d-4125-ad17-d755f9dc780a.jpg";
+const LOGO_IMG = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b9182713699/bucket/91d2850b-d07b-4736-9ab4-23d3cca534fa.png";
 
 type Page = "home" | "services" | "masters" | "booking" | "profile";
 
@@ -140,12 +141,13 @@ function HomePage({ setPage, startBooking }: { setPage: (p: Page) => void; start
         <div className="absolute inset-0" style={{
           background: "linear-gradient(to bottom, rgba(15,15,25,0.3) 0%, rgba(15,15,25,0.7) 60%, rgba(15,15,25,1) 100%)"
         }} />
-        <div className="absolute top-0 left-0 right-0 p-5 flex items-center justify-between">
-          <div>
-            <div className="text-white font-oswald font-bold text-xl tracking-wide">Girly Paradise</div>
-            <div className="text-white/40 text-xs">Салон красоты</div>
+        <div className="absolute top-0 left-0 right-0 p-4 flex items-center justify-between">
+          <div className="w-20 h-20 rounded-2xl overflow-hidden flex items-center justify-center"
+            style={{ background: "rgba(255,255,255,0.92)", backdropFilter: "blur(10px)" }}>
+            <img src={LOGO_IMG} alt="Girly Paradise" className="w-full h-full object-contain p-1" />
           </div>
-          <div className="flex items-center gap-1 text-white/50 text-xs">
+          <div className="flex items-center gap-1 px-3 py-1.5 rounded-full text-white/80 text-xs"
+            style={{ background: "rgba(0,0,0,0.35)", backdropFilter: "blur(8px)" }}>
             <Icon name="MapPin" size={12} />
             <span>м. Парнас</span>
           </div>
@@ -243,7 +245,16 @@ function HomePage({ setPage, startBooking }: { setPage: (p: Page) => void; start
       {/* Contacts */}
       <div className="px-4 mb-2">
         <div className="card-glow rounded-3xl p-5 space-y-4">
-          <h2 className="text-lg font-oswald font-semibold text-white">Как нас найти</h2>
+          <div className="flex items-center gap-3 mb-1">
+            <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0"
+              style={{ background: "white" }}>
+              <img src={LOGO_IMG} alt="Girly Paradise" className="w-full h-full object-contain p-1" />
+            </div>
+            <div>
+              <h2 className="text-lg font-oswald font-semibold text-white leading-tight">Girly Paradise</h2>
+              <p className="text-white/40 text-xs">Beauty Apartments</p>
+            </div>
+          </div>
           <div className="flex items-center gap-3">
             <a href="tel:+79046015556" className="flex items-center gap-3 group flex-1">
               <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
