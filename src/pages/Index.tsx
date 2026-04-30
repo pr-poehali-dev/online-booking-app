@@ -12,14 +12,20 @@ type Page = "home" | "services" | "masters" | "booking" | "profile";
 const services = [
   { id: 5, name: "Чистка лица", category: "Косметология", price: 3200, duration: 90, icon: "Heart", color: "from-rose-500 to-pink-600" },
   { id: 6, name: "Массаж лица", category: "Косметология", price: 2800, duration: 60, icon: "Wind", color: "from-teal-500 to-cyan-600" },
+  { id: 10, name: "Ламинирование ресниц", category: "Брови и ресницы", price: 2000, duration: 90, icon: "Eye", color: "from-pink-500 to-purple-600" },
+  { id: 11, name: "Окрашивание ресниц", category: "Брови и ресницы", price: 800, duration: 30, icon: "Droplet", color: "from-fuchsia-500 to-pink-600" },
+  { id: 12, name: "Ламинирование бровей", category: "Брови и ресницы", price: 1500, duration: 60, icon: "Sparkles", color: "from-rose-500 to-fuchsia-600" },
+  { id: 13, name: "Окрашивание бровей", category: "Брови и ресницы", price: 700, duration: 30, icon: "Brush", color: "from-amber-500 to-rose-500" },
 ];
 
-const categories = ["Все", "Косметология"];
+const categories = ["Все", "Косметология", "Брови и ресницы"];
 
 const GALINA_IMG = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b9182713699/bucket/8f8e57f4-caad-4931-8d8a-bea880feb389.jpg";
+const KSENIA_IMG = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b9182713699/bucket/c37f5198-3009-45a2-8b43-f0f0dd39d20f.jpg";
 
 const masters = [
   { id: 1, name: "Галина Сиплатова", spec: "Косметолог-эстетист", rating: 5.0, reviews: 312, img: GALINA_IMG, tags: ["Чистка лица", "Массаж лица", "Омоложение", "Коррекция фигуры"] },
+  { id: 2, name: "Ксения", spec: "Мастер бровей и ресниц", rating: 5.0, reviews: 184, img: KSENIA_IMG, tags: ["Ламинирование ресниц", "Окрашивание ресниц", "Ламинирование бровей", "Окрашивание бровей"] },
 ];
 
 const timeSlots = ["11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"];
