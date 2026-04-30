@@ -16,7 +16,7 @@ const services = [
 
 const categories = ["Все", "Косметология"];
 
-const GALINA_IMG = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b9182713699/bucket/fca14d2f-e578-4aaf-8503-1ac82dd6ddca.jpg";
+const GALINA_IMG = "https://cdn.poehali.dev/projects/5f8fa1c3-7bb5-4e9b-a111-7b9182713699/bucket/8f8e57f4-caad-4931-8d8a-bea880feb389.jpg";
 
 const masters = [
   { id: 1, name: "Галина Сиплатова", spec: "Косметолог-эстетист", rating: 5.0, reviews: 312, img: GALINA_IMG, tags: ["Чистка лица", "Массаж лица", "Омоложение", "Коррекция фигуры"] },
